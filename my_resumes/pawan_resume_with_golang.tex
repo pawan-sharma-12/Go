@@ -1,0 +1,377 @@
+%%%%%%%%%%%%%%%%%
+% This is an example CV created using altacv.cls (v1.1.5, 1 December 2018) written by
+% LianTze Lim (liantze@gmail.com), based on the
+% Cv created by BusinessInsider at http://www.businessinsider.my/a-sample-resume-for-marissa-mayer-2016-7/?r=US&IR=T
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% If you are using \orcid or academicons
+%% icons, make sure you have the academicons
+%% option here, and compile with XeLaTeX
+%% or LuaLaTeX.
+ %\documentclass[11pt,a4paper,academicons]{altacv}
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+%\documentclass[11pt,a4paper,normalphoto]{altacv}
+
+\documentclass[11pt,a4paper,ragged2e]{altacv}
+
+%% AltaCV uses the fontawesome and academicon fonts
+%% and packages.
+%% See texdoc.net/pkg/fontawecome and http://texdoc.net/pkg/academicons for full list of symbols. You MUST compile with XeLaTeX or LuaLaTeX if you want to use academicons.
+
+% Change the page layout if you need to
+\geometry{left=1cm,right=10cm,marginparwidth=8.4cm,marginparsep=.5cm,top=1cm,bottom=1cm}
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\usepackage[hidelinks]{hyperref}
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  \setmainfont{Carlito}
+\else
+  % If using pdflatex:
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  \usepackage[default]{lato}
+\fi
+
+% Change the colours if you want to
+\definecolor{VividPurple}{HTML}{3E0097}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+% \colorlet{name}{black}
+% \colorlet{tagline}{PastelRed}
+\colorlet{heading}{VividPurple}
+\colorlet{headingrule}{VividPurple}
+% \colorlet{subheading}{PastelRed}
+\colorlet{accent}{VividPurple}
+% \colorlet{emphasis}{SlateGrey}
+% \colorlet{body}{LightGrey}
+
+% Change the bullets for itemize and rating marker
+
+%------------extra imports and all ------
+
+
+ 
+    \usepackage{verbatim} % reimplements the "verbatim" and "verbatim*" environments
+    
+    \usepackage{titlesec} % provides an interface to sectioning commands i.e. custom elements
+    
+    \usepackage{color} % provides both foreground and background color management
+    
+    \usepackage{enumitem} % provides control over enumerate, itemize and description
+    
+    \usepackage{fancyhdr} % provides extensive facilities for constructing headers, footers and also controlling their use
+    
+    \usepackage{tabularx} % defines an environment tabularx, extension of "tabular" with an extra designator x, paragraph like column whose width automatically expands to fill the width of the environment
+    
+    \usepackage{latexsym} % provides mathematical symbols
+    
+    \usepackage{marvosym} % provides martin vogel's symbol font which contains various symbols
+    
+    \usepackage[empty]{fullpage} % sets margins to one inch and removes headers, footers etc..
+    
+    \usepackage[hidelinks]{hyperref} % removes color and shadow of hyperlinks
+    
+    \usepackage[normalem]{ulem} % provides "\ul" (uline) command which will break at line breaks
+    
+    \usepackage[english]{babel} % provides culturally determined typographical rules for wide range of languages
+    %-----------------------------------------
+    
+    \input glyphtounicode % converts glyph names to unicode
+    \pdfgentounicode=1 % ensures pdfs generated are ats readable
+    
+    %----------FONT OPTIONS-------------------
+    \usepackage[default]{sourcesanspro} % uses the font source sans pro
+    \urlstyle{same} % changes url font from default urlfont to font being used by the document
+    %-----------------------------------------
+    
+    
+    %----------MARGIN OPTIONS-----------------
+    \pagestyle{fancy} % set page style to one configured by fancyhdr
+    \fancyhf{} % clear all header and footer fields
+    
+    \renewcommand{\headrulewidth}{0in} % sets thickness of linerule under header to zero
+    \renewcommand{\footrulewidth}{0in} % sets thickness of linerule over footer to zero
+    
+    \setlength{\tabcolsep}{0in} % sets thickness of column separator in tables to zero
+    
+    % origin of the document is one inch from the top and from and the left
+    % oddsidemargin and evensidemargin both refer to the left margin
+    % right margin is indirectly set using oddsidemargin
+    \addtolength{\oddsidemargin}{-0.5in}
+    \addtolength{\topmargin}{-0.5in}
+    
+    \addtolength{\textwidth}{1.0in} % sets width of text area in the page to one inch
+    \addtolength{\textheight}{1.0in} % sets height of text area in the page to one inch
+    
+    \raggedbottom{} % makes all pages the height of current page, no extra vertical space added
+    \raggedright{} % makes all pages the width of current page, no extra horizontal space added
+    %------------------------------------------
+    
+    
+    %--------SECTIONING COMMANDS---------
+    % \titleformat{<command>}
+    %   [<shape>]{<format>}{<label>}{<sep>}
+    %     {<before-code>}[<after-code>]
+    
+    % command is the sectioning command to be redefined
+    % shape is the style of the font; scshape stands for small caps style
+    % format is the format to be applied to whole title- label and text; absent here
+    % label defines the label
+    % sep is the horizontal separation between label and title body
+    % before-code is the code to be executed before
+    % after-code is the code to be executed after
+    
+    \titleformat{\section}
+      {\scshape\large}{}
+        {0em}{\color{blue}}[\color{black}\titlerule\vspace{0pt}]
+    %-------------------------------------
+    
+    
+    %--------REDEFINITIONS----------------
+    % redefines the style of the bullet point
+    \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+    
+    % redefines the underline depth to 2pt
+    \renewcommand{\ULdepth}{2pt}
+    %-------------------------------------
+    
+    
+    %--------CUSTOM COMMANDS--------------
+    %\vspace{} defines a vertical space of given size, modifying this in custom commands can help stretch or shrink resume to remove or add content
+    
+    % resumeItem renders a bullet point
+    \newcommand{\resumeItem}[1]{
+      \item\small{#1}
+    }
+    
+    % commands to start and end itemization of resumeItem, rightmargin set to 0.11in to avoid the overflow of resumetItem beyond whatever resumeItemHeading is being used
+    \newcommand{\resumeItemListStart}{\begin{itemize}[rightmargin=0.11in]}
+    \newcommand{\resumeItemListEnd}{\end{itemize}}
+    
+    % resumeSectionType renders a bolded type to be used under a section, used as skill type here, middle element is used to keep ":"s in the same vertical line
+    \newcommand{\resumeSectionType}[3]{
+      \item\begin{tabular*}{0.96\textwidth}[t]{
+        p{0.15\linewidth}p{0.02\linewidth}p{0.81\linewidth}
+      }
+        \textbf{#1} & #2 & #3
+      \end{tabular*}\vspace{-2pt}
+    }
+    
+    % resumeTrioHeading renders three elements in three columns with second element being italicized and first element bolded, can be used for projects with three elements
+    \newcommand{\resumeTrioHeading}[3]{
+      \item\small{
+        \begin{tabular*}{0.96\textwidth}[t]{
+          l@{\extracolsep{\fill}}c@{\extracolsep{\fill}}r
+        }
+          \textbf{#1} & \textit{#2} & #3
+        \end{tabular*}
+      }
+    }
+    
+    % resumeQuadHeading renders four elements in a two columns with the second row being italicized and first element of first row bolded, can be used for experience and projects with four elements
+    \newcommand{\resumeQuadHeading}[4]{
+      \item
+      \begin{tabular*}{0.96\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & #2 \\
+        \textit{\small#3} & \textit{\small #4} \\
+      \end{tabular*}
+    }
+    
+    % resumeQuadHeadingChild renders the second row of resumeQuadHeading, can be used for experience if different roles in the same company need to added
+    \newcommand{\resumeQuadHeadingChild}[2]{
+      \item
+      \begin{tabular*}{0.96\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{\small#1} & {\small#2} \\
+      \end{tabular*}
+    }
+    
+    % commands to start and end itemization of resumeQuadHeading, lefmargin for left indent of 0.15in for resumeItems
+    \newcommand{\resumeHeadingListStart}{
+      \begin{itemize}[leftmargin=0.15in, label={}]
+    }
+    \newcommand{\resumeHeadingListEnd}{\end{itemize}}
+    %-------------------------------------------
+
+
+%--------------------end of extra imports------
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+%% sample.bib contains your publications
+\addbibresource{sample.bib}
+
+\begin{document}
+\name{PAWAN KUMAR SHARMA}
+\tagline{Software Engineer  with 1.5 years of experience}
+% Cropped to square from https://en.wikipedia.org/wiki/Marissa_Mayer#/media/File:Marissa_Mayer_May_2014_(cropped).jpg, CC-BY 2.0
+%% You can add multiple photos on the left or right
+\personalinfo{
+  % Not all of these are required!
+  % You can add your own with \printinfo{symbol}{detail}
+  \email{ps2020nitsri@gmail.com}
+  \location{Bengaluru,INDIA}
+  \linkedin{\href{https://www.linkedin.com/in/pawan-sharma-903276207/}{LinkedIn}}
+  \github{\href{https://github.com/pawan-sharma-12}{github}}
+  \phone{+916006252020}
+  % I'm just making this up though.
+%   \orcid{orcid.org/0000-0000-0000-0000} % Obviously making this up too. If you want to use this field (and also other academicons symbols), add "academicons" option to \documentclass{altacv}
+}
+
+%% Make the header extend all the way to the right, if you want.
+\begin{fullwidth}
+\makecvheader
+\end{fullwidth}
+
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+\AtBeginEnvironment{itemize}{\small}
+
+%% Provide the file name containing the sidebar contents as an optional parameter to \cvsection.
+%% You can always just use \marginpar{...} if you do
+%% not need to align the top of the contents to any
+%% \cvsection title in the "main" bar.
+
+
+
+%-----------EXPERIENCE-----------------------
+    % Distill all your talking points into small bullet points which follow the pattern "challenge-action-result" for maximum efficiency. Try to quantify (use numbers) your points whenever possible, highlight words of importance
+    \vspace{-5mm}
+   \section{Experience}
+  \resumeHeadingListStart{}
+  \vspace{-3mm}
+    \resumeQuadHeading
+      {Technical Lead}{Oct 2023 -- Present}
+      {@HCL Technologies }{Bengaluru, India}
+\resumeItemListStart{}
+\vspace{1mm}
+  \resumeItem
+    {Engineered a high-throughput \textbf{GoLang event-driven pipeline} processing over \textbf{1M daily events} via \textbf{AWS SNS/SQS}, reducing average job latency by \textbf{80\%} across regional clusters for enterprise-grade workloads.}
+  \resumeItem
+    {Designed and implemented an intelligent \textbf{browser-autofill module} leveraging historical form data and user behavior patterns, cutting form abandonment by \textbf{8\%} and increasing completed applications by \textbf{1.5K+ per month}.}
+  \resumeItem
+    {Built and deployed 10+ \textbf{production-ready GoLang microservices} integrated with \textbf{PostgreSQL/GORM}, achieving \textbf{95\% test coverage} via TDD, automating CI/CD pipelines, and reducing post-release defects by \textbf{30\%}.}
+  \resumeItem
+    {Boosted \textbf{API throughput} by \textbf{60\%} (200 req/s → 320 req/s) using \textbf{Redis caching} and partitioned database indexing, maintaining sub-\textbf{200 ms latency} under \textbf{100K+ daily active users} at peak load.}
+\resumeItemListEnd{}
+\resumeHeadingListEnd{}
+
+
+        
+        
+    \resumeHeadingListEnd{}
+      \resumeHeadingListStart{}
+      \vspace{-1mm}
+      \resumeQuadHeading{Subject Expert}{2020 - 2022}
+      { Chegg.com}{Remote }
+        \resumeItemListStart{}
+          \resumeItem{Solved multiple \textbf{Math} problems asked by the students all around the world in the subject of \textbf{Algebra,} \textbf{Aptitute}, more. }
+         
+        \resumeItemListEnd{}
+    \resumeHeadingListEnd{}
+    \vspace{-15}
+
+
+%--------------SKILLS------------------------
+    % Add or remove resumeSectionTypes according to your needs
+    \vspace{-3mm}
+\section{Technical Skills}
+    \vspace{-2mm}
+\resumeHeadingListStart
+  \resumeSectionType{Frameworks }{:} {FastHttp, Gin, Node JS, Express JS, React JS, Tailwind CSS, Bootstrap}
+  \resumeSectionType{Languages}{:} {GoLang, Python, Javascript, Typescript Java,   C / C++, HTML, 
+   CSS, SQL}
+  \resumeSectionType{Tools}{:} {Docker, Kafka, RabbitMQ, AWS, gRPC, GraphQL, WebSocket, Git, Github, CI/CD, Postman, BitBucket, DevMate(Meta AI), Claude 4.0, GPT-4.0 etc}
+  \resumeSectionType{Databases}{:} {PostgreSQL, MongoDB, Redis, Elasticsearch, DuckDB
+ MySQL}
+ \resumeSectionType{OS }{:} {Linux(CentOs, Ubuntu), Windows Server}
+\resumeHeadingListEnd
+
+
+
+%-----------EDUCATION-------------------------
+    % Mention your CGPA, if it's good, in the first row of the second column
+      \vspace{-5mm}
+    \section{Education}
+      \resumeHeadingListStart{}
+      \vspace{-2mm}
+      \resumeQuadHeading{Bachelor of Technology in Information Technology}{ Aug 2019 - Aug 2023}
+        {National Institute of Technology, Srinagar
+}{Jammu \& Kashmir, India}
+        {Overall CGPA - 8.4/10}
+        
+        
+      \resumeHeadingListEnd{}
+
+\vspace{-6mm}
+      %--------------CODING PROFILES------------------------
+    % Add or remove resumeSectionTypes according to your needs
+    
+    \section{Achievements}
+     \vspace{-3mm}
+      \resumeHeadingListStart{}
+      \resumeItemListStart{}{
+             \resumeItem{
+             \textbf{Solved more than 600+ DSA problems on various coding platforms. }
+             
+             }
+      }
+        \resumeSectionType{\href{https://leetcode.com/jayant2k1/}{GFG}}{:}{solved \textbf{400+} problems on practice section \uline{\textit{\href{https://www.geeksforgeeks.org/user/ps2020nitsri/}{\color{blue}{[ Handle (ps2020nitsri)]}}}}}
+         \resumeSectionType{\href{https://leetcode.com/ps2020nitsri/}{Leetcode}}{:}{Solved \textbf{200+} DSA problems \uline{ \textit{\href{https://leetcode.com/ps2020nitsri/}{\color{blue}{[Handle (ps2020nitsri)]}}}}}
+    \resumeSectionType{{College}}{:}{Secured \textbf{9.3} cgpa in 4th sem in College \textbf{Top Performer}  }
+      
+       
+      \resumeHeadingListEnd{}
+      \vspace{-10mm}
+    %--------------------------------------------
+    %---------------------------------------------
+
+%-----------PROJECTS--------------------------
+    % Use resumeQuadHeading if four elements are feasible (ex: demo video link), else use resumeTrioHeading. Keep the bullet points simple and concise and try to cover wide variety of skills you have used to build these projects
+\section{Projects}
+\resumeHeadingListStart{}
+\vspace{-3mm}
+\resumeTrioHeading{\href{/}{\uline{\href{https://github.com/pawan-sharma-12/DrYoga}{DrYoga}}}}{ReactJS, ExpressJS, NodeJS, MongoDB, Python, Neural Networks, AI/ML, MERN Stack}{\href{https://github.com/pawan-sharma-12/DrYoga}{\uline{Github}}}
+\vspace{-3mm}
+\resumeItemListStart{}
+    \resumeItem{Developed a \textbf{MERN stack AI/ML Health Recommendation System}, generating personalized yoga routines, exercises, and dietary guidance based on \textbf{user metrics} and \textbf{health conditions}.}
+    \resumeItem{Engineered a \textbf{real-time pose estimation and correction module}, providing personalized posture feedback to enhance user engagement and exercise effectiveness.}
+    \resumeItem{Built an \textbf{adaptive recommendation engine} that continuously learns from user behavior and feedback to improve pose and diet suggestions.}
+    \resumeItem{Implemented a \textbf{scalable full-stack architecture} with ReactJS frontend, NodeJS/Express backend, and MongoDB storage, supporting multiple concurrent users efficiently.}
+    \resumeItem{Integrated \textbf{Python-based AI inference} into NodeJS backend, reducing dependency on trainers and delivering cost-effective, automated health guidance.}
+\resumeItemListEnd{}
+\vspace{-1mm}
+\resumeTrioHeading{\href{https://filmy-verse.netlify.app/}{\uline{Filmy Verse (Web Application)}}}{HTML, CSS, Tailwind, ReactJS, NodeJS, MongoDB, ExpressJS, Axios}{\href{https://filmy-verse.netlify.app/}{\uline{Live}}}
+\vspace{-3mm}
+\resumeItemListStart{}
+    \vspace{-1mm}
+    \resumeItem{Developed a \textbf{Single Page Application} showcasing \textbf{1000+ movies and TV series}, dynamically fetching data from \textbf{TMDB API} using \textbf{Axios}.}
+    \vspace{-1mm}
+    \resumeItem{Built a \textbf{robust backend} with NodeJS and ExpressJS, handling concurrent requests efficiently and integrating \textbf{MongoDB} for storing user preferences, watch history, and favorites.}
+    \vspace{-1mm}
+    \resumeItem{Implemented a \textbf{responsive ReactJS frontend} with Tailwind CSS, enabling seamless browsing, search, filtering, and sorting of content.}
+    \vspace{-1mm}
+\resumeItem{Integrated \textbf{React Cookies and local storage} to maintain sessions, watchlists, and personalized recommendations, while enhancing performance and UX through \textbf{lazy loading, API caching, and dynamic content updates}, delivering a seamless Netflix-like content discovery experience.}
+\resumeItemListEnd{}
+
+\resumeHeadingListEnd{}
+
+    %--------------------------------------------
+
+
+% \section{Course Work and Certifications}
+%       % \resumeHeadingListStart{}
+%       %   \resumeSectionType{\href{https://leetcode.com/jayant2k1/}{Leetcode}}{:}{\textbf{Knight} (Max Rating \textbf{1876}), \textbf{1000+} Resolved | Handle : \uline{\textit{\href{https://leetcode.com/jayant2k1/}{jayant2k1}}}}
+         
+%       % \resumeHeadingListEnd{}
+\end{document}
